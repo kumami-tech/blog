@@ -1,0 +1,6 @@
+.Wrapper
+  - if @posts.empty?
+    = "投稿はありません"
+  - else
+    .Post_index
+      = render @posts

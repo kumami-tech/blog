@@ -1,0 +1,11 @@
+.Post_box
+  = link_to posts_path(post) do
+    .Post_content
+      = image_tag post.image.url, class: "Post_image"
+      .Post_text
+        .Post_title
+          = post.title
+        .Post_time
+          = post.created_at.strftime("%Y年%-m月%-d日 %-H:%M")
+        .Post_user_name
+          = post.user.name
