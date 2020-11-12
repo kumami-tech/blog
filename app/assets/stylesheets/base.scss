@@ -12,6 +12,13 @@ a {
   text-decoration: none;
 }
 
+.Wrapper {
+  width: 100vw;
+  min-height: calc(100vh - 60px);
+  padding: 40px 0;
+  background-color: $light_blue;
+}
+
 .Btn {
   width: 100px;
   background-color: $blue;
