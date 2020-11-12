@@ -1,8 +1,8 @@
 .Wrapper
   .Post_show_box
-    .Post_menu_icon
+    .Post_menu_btn#Post_menu_btn
       = icon('fas', 'ellipsis-v')
-    .Post_menu
+    .Post_menu#Post_menu
       = link_to edit_post_path(@post) do
         .Post_menu__Content
           = "編集"
