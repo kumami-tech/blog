@@ -1,7 +1,7 @@
 .Wrapper
   .Post_form_box
     .Post_form
-      = form_with(model: @post, url: "/posts/#{@post.id}", local: true) do |f|
+      = form_with(model: @post, url: posts_path, local: true) do |f|
         .Post_form__Content
           = f.label "アイキャッチ画像", class: "Image_label"
           %span
