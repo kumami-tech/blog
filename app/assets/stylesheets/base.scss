@@ -10,6 +10,11 @@ $black: #4A4A4A;
 $link_blue: #3273dc;
 $blue: #00A9FF;
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .Btn {
   width: 100px;
   background-color: $blue;
