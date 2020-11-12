@@ -1,21 +1,22 @@
 .Wrapper
   .Post_show_box
-    .Post_menu_btn#Post_menu_btn
-      = icon('fas', 'ellipsis-v')
-    .Post_menu#Post_menu
-      = link_to edit_post_path(@post) do
-        .Post_menu__Content
-          = "編集"
-      = link_to "/posts/#{@post.id}", method: :delete, data: { confirm: "投稿を削除しますか？" } do
-        .Post_menu__Content
-          = "削除"
+    - if user_signed_in? && @user.id == current_user.id
+      .Post_menu_btn#Post_menu_btn
+        = icon('fas', 'ellipsis-v')
+      .Post_menu#Post_menu
+        = link_to edit_post_path(@post) do
+          .Post_menu__Content
+            = "編集"
+        = link_to "/posts/#{@post.id}", method: :delete, data: { confirm: "投稿を削除しますか？" } do
+          .Post_menu__Content
+            = "削除"
     .Post_info
       .Post_title
         = @post.title
       .Post_time
         = @post.created_at.strftime("%Y年%-m月%-d日")
       .Post_user_name
-        = @post.user.name
+        = @user.name
       = image_tag @post.image.url, class: "Post_image"
     .Post_content
       = simple_format(@post.content)
