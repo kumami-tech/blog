@@ -23,6 +23,24 @@ class PostsController < ApplicationController
   def show
   end
 
+  def edit; end
+
+  def update
+    if @post.update(post_params)
+      flash[:notice] = '投稿を編集しました。'
+      redirect_to post_path(@post)
+    else
+      flash[:alert] = '入力に不備があります。'
+      render "edit"
+    end
+  end
+
+  def destroy
+    @post.destroy
+    flash[:notice] = '投稿を削除しました。'
+    redirect_to root_path
+  end
+
   private
 
   def post_params
