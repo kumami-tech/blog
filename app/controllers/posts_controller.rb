@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, except: %i[index new create]
+
   def index
     @posts = Post.includes(:user)
   end
@@ -18,7 +20,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  private
+
   def post_params
     params.require(:post).permit(:title, :content, :image).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
