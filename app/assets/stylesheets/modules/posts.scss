@@ -148,3 +148,55 @@
     margin: 20px auto 0;
   }
 }
+
+// コメント
+.Comment_box {
+  width: 920px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 60px;
+  .Comment_title {
+    font-weight: bold;
+  }
+  .Comment_form {
+    width: 100%;
+    margin-bottom: 40px;
+    &__Field {
+      width: 100%;
+      padding: 5px;
+    }
+    .Nickname_field {
+      height: 40px;
+      margin: 20px 0;
+    }
+    .Comment_form__Btn {
+      margin-top: 20px;
+      margin-right: 0;
+    }
+  }
+  .Comment{
+    padding: 25px 0;
+    border-top: solid 1px $gray3;
+    .Comment_info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      .Nickname {
+        font-weight: bold;
+        font-size: 15px;
+      }
+      .Time {
+        color: $gray4;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .Comment_content {
+      font-size: 15px;
+    }
+  }
+  .Comment:first-child {
+    border: none;
+  }
+}
