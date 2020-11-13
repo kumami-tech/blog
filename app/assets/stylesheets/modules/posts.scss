@@ -85,7 +85,7 @@
     }
   }
 }
-.Empty {
+.Post_empty {
   margin-top: 100px;
   text-align: center;
   color: $gray3;
@@ -182,6 +182,11 @@
       margin-top: 20px;
       margin-right: 0;
     }
+  }
+  .Comment_empty {
+    margin-top: 20px;
+    color: $gray3;
+    font-size: 15px;
   }
   .Comment{
     padding: 25px 0;

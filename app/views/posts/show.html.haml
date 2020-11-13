@@ -31,7 +31,8 @@
     .Comment_title
       = "＜コメント一覧＞"
     - if @comments.empty?
-      = "コメントはありません"
+      .Comment_empty
+        = "コメントはありません"
     - else
       .Comment_index
         - @comments.each do |comment|
