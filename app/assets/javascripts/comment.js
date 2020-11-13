@@ -32,9 +32,10 @@ $(function(){
       $('.Comment_index').prepend(html);
       $('.Comment_form__Field').val('');
       $('.Comment_form__Btn').prop('disabled', false);
+      $('.Comment_empty').hide();
     })
     .fail(function(){
-      alert('コメントを投稿できませんでした');
+      alert('入力に不備があります');
     })
   })
 });
