@@ -5,7 +5,9 @@
       %span Blog
     .Header_btns
       - if user_signed_in?
-        = link_to "新規投稿", new_post_path, class:"Header_btn"
+        = link_to "新規投稿", new_post_path, class:"Header_btn Left"
+        - if user_signed_in?
+          = link_to "CSV出力", posts_path(format: :csv), class: "Header_btn"
         = link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class:"Header_btn Right"
       - else
         = link_to "管理者ログイン", new_user_session_path, class:"Header_btn"
