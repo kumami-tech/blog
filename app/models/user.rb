@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :posts
 
-  validates :name, presence: true, uniqueness: { case_sensitive: true }
+  validates :name, presence: true, uniqueness: { case_sensitive: true }, length: { maximum: 20 }
 end
