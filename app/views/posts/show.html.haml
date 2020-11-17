@@ -33,15 +33,7 @@
     - if @comments.empty?
       .Comment_index
         .Comment_empty
-          = "コメントはありません"
+          コメントはありません
     - else
       .Comment_index
-        - @comments.each do |comment|
-          .Comment
-            .Comment_info
-              .Nickname
-                = comment.nickname
-              .Time
-                = comment.created_at.strftime("%Y年%-m月%-d日 %-H:%M")
-            .Comment_content
-              = simple_format(comment.content)
+        = render partial: "comment", collection: @comments
