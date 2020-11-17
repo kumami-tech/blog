@@ -8,7 +8,8 @@ CSV.generate do |csv|
       post.title,
       post.content,
       post.image,
-      post.created_at
+      post.created_at,
+      post.user.name
     ]
     csv << csv_column_values
   end
