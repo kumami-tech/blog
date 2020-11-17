@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(comment){
-    let html = `<div class="Comment">
+    const html = `<div class="Comment">
                   <div class="Comment_info">
                     <div class="Nickname">
                       ${comment.nickname}
@@ -17,8 +17,8 @@ $(function(){
   }
   $('.Comment_form').on('submit', function(e){
     e.preventDefault();
-    let formData = new FormData(this);
-    let url = $(this).attr('action');
+    const formData = new FormData(this);
+    const url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -28,7 +28,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      let html = buildHTML(data);
+      const html = buildHTML(data);
       $('.Comment_index').prepend(html);
       $('.Comment_form__Field').val('');
       $('.Comment_form__Btn').prop('disabled', false);
