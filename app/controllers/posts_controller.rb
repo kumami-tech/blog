@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, except: %i[index new create]
 
   def index
-    @posts = Post.includes(:user)
+    @posts = Post.includes(:user).sorted
   end
 
   def new
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   def show
     @user = @post.user
     @comment = Comment.new
-    @comments = @post.comments
+    @comments = @post.comments.sorted
   end
 
   def edit; end
