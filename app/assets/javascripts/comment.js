@@ -36,6 +36,7 @@ $(function(){
     })
     .fail(function(){
       alert('入力に不備があります');
+      $('.Comment_form__Btn').prop('disabled', false);
     })
   })
 });
