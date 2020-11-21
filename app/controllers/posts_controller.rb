@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.includes(:user).sorted
+    @posts = Post.page(params[:page]).per(9)
   end
 
   def new

@@ -85,6 +85,23 @@
     }
   }
 }
+.Pagination {
+  width: 1070px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 17px;
+  i {
+    font-size: 18px;
+  }
+  a {
+    color: black;
+    margin: 0 5px;
+  }
+  .current {
+    color: $blue;
+    margin: 0 5px;
+  }
+}
 .Post_empty {
   margin-top: 100px;
   text-align: center;
