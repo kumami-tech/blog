@@ -1,0 +1,156 @@
+@import "base";
+
+* {
+  box-sizing: border-box;
+}
+
+// 投稿フォーム
+.Post_form_box {
+  width: 1070px;
+  height: 890px;
+  background-color: white;
+  margin: 0 auto;
+  .Post_form {
+    width: 940px;
+    margin: 0 auto;
+    padding: 40px 0;
+    &__Content {
+      margin-bottom: 35px;
+      font-size: 15px;
+      label {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 3px;
+      }
+      .Image_label {
+        margin-bottom: 6px;
+      }
+      &__Field {
+        height: 40px;
+        width: 940px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border: solid 1px $gray2;
+        border-radius: 3px;
+        background-color: white;
+        margin: 0 auto;
+        &--Large {
+          width: 940px;
+          padding: 5px;
+          border: solid 1px $gray2;
+          border-radius: 3px;
+          background-color: white;
+        }
+      }
+    }
+    &__Btn {
+      margin: 50px auto 30px;
+    }
+  }
+}
+
+// 一覧表示
+.Post_index {
+  width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  .Post_box {
+    margin: 20px;
+    .Post_content {
+      width: 330px;
+      height: 380px;
+      background-color: white;
+      .Post_image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .Post_text {
+        padding: 5px 15px;
+        .Post_title {
+          height: 78px;
+          font-weight: bold;
+          font-size: 17px;
+          margin: 5px 0 30px;
+        }
+        .Post_time {
+          font-size: 13px;
+          color: $gray3;
+        }
+        .Post_user_name {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+.Post_empty {
+  margin-top: 100px;
+  text-align: center;
+  color: $gray3;
+  font-size: 17px;
+}
+
+// 詳細表示
+.Post_show_box {
+  width: 900px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 60px;
+  position: relative;
+  .Post_menu_btn {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    font-size: 20px;
+    color: $gray3;
+    cursor: pointer;
+  }
+  .Post_menu {
+    background-color: white;
+    border: solid 1px $gray1;
+    display: none;
+    position: absolute;
+    top: 95px;
+    right: 80px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    &__Content {
+      padding: 6px 15px;
+      font-size: 14px;
+    }
+    &__Content:hover {
+      background-color: $light_blue;
+      font-size: 14px;
+    }
+  }
+  .Post_info {
+    width: 600px;
+    margin: 0 auto 30px;
+    .Post_title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .Post_time {
+      font-size: 14px;
+      color: $gray3;
+      margin-bottom: 10px;
+    }
+    .Post_user_name {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  .Post_image {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+  }
+  .Post_content {
+    width: 600px;
+    margin: 20px auto 0;
+  }
+}

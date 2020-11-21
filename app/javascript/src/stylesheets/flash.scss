@@ -1,0 +1,21 @@
+@import "base";
+
+@mixin flash() {
+  color: white;
+  text-align: center;
+  height: 30px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.Notification {
+  .notice {
+    background-color: $blue;
+    @include flash();
+  }
+
+  .alert {
+    background-color: $orange;
+    @include flash();
+  }
+}

@@ -1,0 +1,32 @@
+$gray1: #D4D6D5;
+$gray2: #A4A8B1;
+$gray3: #7B7D7F;
+$link_blue: #3273dc;
+$blue: #00A9FF;
+$light_blue: #E5F6FF;
+$orange: #FFB600;
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.Wrapper {
+  width: 100vw;
+  min-height: calc(100vh - 60px);
+  padding: 40px 0;
+  background-color: $light_blue;
+}
+
+.Btn {
+  width: 100px;
+  background-color: $blue;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-style: none;
+  border-radius: 5px;
+  display: block;
+  margin: 50px auto 30px;
+  cursor: pointer;
+}
