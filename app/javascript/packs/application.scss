@@ -1,8 +1,2 @@
-@import "stylesheets/reset";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "stylesheets/base";
-@import "stylesheets/flash";
-@import "stylesheets/header";
-@import "stylesheets/user";
-@import "stylesheets/posts";
-@import "stylesheets/comments";
+@import "../src/stylesheets/*";
