@@ -22,17 +22,20 @@
       = simple_format(@post.content)
 
   .Comment_box
-    .Comment_title
-      = "＜コメントを投稿する＞"
-    = form_with(model: [@post, @comment], local: true, class: "Comment_form", id: "Comment_form") do |f|
-      = f.text_field :nickname, placeholder: "ニックネーム", class: "Comment_form__Field Nickname_field", id: "Nickname_field"
-      = f.text_area :content, placeholder: "コメント", rows: "4", class: "Comment_form__Field", id: "Content_field"
-      = f.submit "投稿", class: "Comment_form__Btn Btn", id: "Comment_form__Btn"
+    - if user_signed_in?
+      .Comment_title
+        = "＜コメントを投稿する＞"
+      = form_with(model: [@post, @comment], local: true, class: "Comment_form", id: "Comment_form") do |f|
+        = f.text_area :content, rows: "4", class: "Comment_form__Field", id: "Content_field"
+        = f.submit "投稿", class: "Comment_form__Btn Btn", id: "Comment_form__Btn"
     .Comment_title
       = "＜コメント一覧＞"
+      - unless user_signed_in?
+        %span
+          = "※ログインするとコメントできます。"
     .Comment_index#Comment_index
       - if @comments.empty?
-        .Comment_empty
+        .Comment_empty#Comment_empty
           コメントはありません
       - else
         = render partial: "comment", collection: @comments

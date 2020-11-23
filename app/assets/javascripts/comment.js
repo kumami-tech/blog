@@ -18,11 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('Comment_form').addEventListener('submit', e => {
     e.preventDefault();
 
-    const inputNickname = document.getElementById('Nickname_field').value;
     const inputContent = document.getElementById('Content_field').value;
     const url = document.getElementById('Comment_form').getAttribute('action') + '.json';
     const hashData = {
-      comment: { nickname: inputNickname, content: inputContent }
+      comment: { content: inputContent }
     };
     const data = JSON.stringify(hashData);
     const xmlHR = new XMLHttpRequest();
@@ -40,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const html = createHTML(comment);
           const comments = document.getElementById('Comment_index');
           comments.insertBefore(html, comments.firstChild);
-          document.getElementById('Nickname_field').value = '';
           document.getElementById('Content_field').value = '';
+          document.getElementById('Comment_empty').style.display = 'none';
         } else {
           alert('入力に不備があります');
         }
