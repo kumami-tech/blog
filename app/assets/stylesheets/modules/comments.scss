@@ -6,6 +6,11 @@
   padding: 60px;
   .Comment_title {
     font-weight: bold;
+    span {
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 16px;
+    }
   }
   .Comment_form {
     width: 100%;
@@ -15,15 +20,15 @@
       padding: 5px;
       border: solid 1px $gray2;
       border-radius: 3px;
-    }
-    .Nickname_field {
-      height: 40px;
-      margin: 20px 0;
+      margin-top: 15px;
     }
     .Comment_form__Btn {
       margin-top: 20px;
       margin-right: 0;
     }
+  }
+  .Logout_comment {
+    margin-bottom: 30px;
   }
   .Comment_empty {
     margin-top: 20px;
